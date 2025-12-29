@@ -1,0 +1,117 @@
+:root {
+  /* Colors - Dark Mode Default (or neutral) */
+  --bg-primary-sidebar: #1E1E1E;
+  --bg-secondary-sidebar: #252526;
+
+  /* Dark Paper Look */
+  --bg-editor: #1E1E1E;
+  --text-editor: #CCCCCC;
+  --text-editor-placeholder: #555555;
+  --notes-line-color: rgba(255, 255, 255, 0.05);
+  /* Faint white lines */
+
+  --text-primary: #ECECEC;
+  --text-secondary: #999999;
+
+  --accent-color: #0078D7;
+  --accent-hover: #1084E3;
+
+  --border-color: #333333;
+
+  --highlight-color: #B5A800;
+  /* Darker yellow for dark mode */
+
+  /* Layout */
+  --width-primary-sidebar: 70px;
+  --width-secondary-sidebar: 250px;
+
+  /* Fonts */
+  --font-family-ui: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-editor: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body.light-theme {
+  --bg-primary-sidebar: #E0E0E0;
+  --bg-secondary-sidebar: #F5F5F5;
+
+  /* White Paper Look */
+  --bg-editor: #FAFAFA;
+  --text-editor: #222222;
+  --text-editor-placeholder: #999999;
+  --notes-line-color: #E0E0E0;
+  /* Faint gray lines */
+
+  --text-primary: #333;
+  --border-color: #CCC;
+
+  --highlight-color: #FFF200;
+  /* Bright yellow */
+}
+
+body.sepia-theme {
+  --bg-primary-sidebar: #E8DCC4;
+  --bg-secondary-sidebar: #F4E8D1;
+
+  --bg-editor: #F9F0E1;
+  /* Sepia paper */
+  --text-editor: #433422;
+  /* Dark brown text */
+  --text-editor-placeholder: #8D7B66;
+  --notes-line-color: #E2D2B8;
+
+  --text-primary: #5B4636;
+  --text-secondary: #8D7B66;
+
+  --accent-color: #A67C52;
+  /* Brownish accent */
+  --accent-hover: #8D6740;
+
+  --border-color: #D7C6AD;
+  --highlight-color: #FFD54F;
+  /* Golden yellow */
+}
+
+body.midnight-theme {
+  --bg-primary-sidebar: #0A1120;
+  --bg-secondary-sidebar: #0F172A;
+
+  --bg-editor: #0A1120;
+  /* Deep blue-black */
+  --text-editor: #E2E8F0;
+  /* Slate light */
+  --text-editor-placeholder: #475569;
+  --notes-line-color: rgba(255, 255, 255, 0.05);
+
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+
+  --accent-color: #38BDF8;
+  /* Sky blue */
+  --accent-hover: #0EA5E9;
+
+  --border-color: #1E293B;
+  --highlight-color: #0369A1;
+  /* Deep blue highlight */
+}
+
+body.forest-theme {
+  --bg-primary-sidebar: #132418;
+  --bg-secondary-sidebar: #1A3121;
+
+  --bg-editor: #132418;
+  /* Dark green */
+  --text-editor: #D1D5DB;
+  --text-editor-placeholder: #4B5563;
+  --notes-line-color: rgba(255, 255, 255, 0.05);
+
+  --text-primary: #E5E7EB;
+  --text-secondary: #9CA3AF;
+
+  --accent-color: #22C55E;
+  /* Bright green */
+  --accent-hover: #16A34A;
+
+  --border-color: #26432D;
+  --highlight-color: #15803D;
+  /* Forest green highlight */
+}

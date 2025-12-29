@@ -1,0 +1,127 @@
+/* Editor Area */
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--bg-editor);
+    color: var(--text-editor);
+
+    .editor-header {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--bg-editor);
+        /* Glassy? */
+
+        .note-title-input {
+            font-family: var(--font-family-ui);
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: none;
+            background: transparent;
+            outline: none;
+            color: var(--text-editor);
+            width: 60%;
+
+            &::placeholder {
+                color: var(--text-editor-placeholder);
+            }
+        }
+
+        .editor-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .last-edited {
+                font-size: 0.8rem;
+                color: var(--text-editor-placeholder);
+                margin-left: 1rem;
+            }
+
+            .icon-btn {
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: var(--text-editor-placeholder);
+                padding: 4px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: color 0.2s;
+
+                &:hover {
+                    color: var(--text-editor);
+                    background-color: rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+    }
+
+    .notebook-wrapper {
+        flex-grow: 1;
+        position: relative;
+        overflow-y: auto;
+
+        .notebook-lines-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            /* Notebook Lines */
+            background-image: linear-gradient(var(--notes-line-color) 1px, transparent 1px);
+            background-size: 100% 2rem;
+            /* Line height match */
+            background-position: 0 2rem;
+            /* Offset */
+
+            /* Vertical red line margin */
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 3rem;
+                /* Margin width */
+                width: 1px;
+                background-color: rgba(255, 0, 0, 0.1);
+            }
+        }
+
+        .editor-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 4rem;
+            /* Left padding > red line */
+            padding-top: 1px;
+            /* Align first line */
+            min-height: 100%;
+            outline: none;
+            font-family: var(--font-family-editor);
+            font-size: 1.1rem;
+            line-height: 2rem;
+            /* MUST match background-size height */
+            color: var(--text-editor);
+
+            /* Fix for empty content height */
+            &:empty::before {
+                content: 'Start writing...';
+                color: rgba(0, 0, 0, 0.3);
+            }
+
+            /* Highlight style */
+            span.highlight {
+                background-color: var(--highlight-color);
+                border-radius: 2px;
+                padding: 0 2px;
+                box-decoration-break: clone;
+                -webkit-box-decoration-break: clone;
+            }
+        }
+    }
+}

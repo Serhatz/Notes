@@ -1,0 +1,36 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "A modern, lightweight note-taking app for Windows with a clean three-panel layout. Designed for simplicity and focus, it features a notebook-style editor with subtle lines and text highlighting, making writing feel natural and distraction-free. Built for fast daily use.",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run sass && electron .",
+    "sass": "sass src/styles/main.scss src/styles/main.css",
+    "watch:sass": "sass --watch src/styles/main.scss src/styles/main.css",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serhatz/Notes.git"
+  },
+  "keywords": [],
+  "author": "Serhatz",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Serhatz/Notes/issues"
+  },
+  "homepage": "https://github.com/Serhatz/Notes#readme",
+  "devDependencies": {
+    "sass": "^1.97.1",
+    "electron": "^28.0.0",
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "uuid": "^13.0.0"
+  }
+}

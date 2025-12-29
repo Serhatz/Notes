@@ -1,0 +1,31 @@
+@import 'variables';
+@import 'layout';
+@import 'sidebar';
+@import 'editor';
+@import 'modal';
+@import 'animations';
+
+/* Quick interim styles to verify layout until partials are ready */
+.primary-sidebar {
+    background-color: var(--bg-primary-sidebar);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.note-list-sidebar {
+    background-color: var(--bg-secondary-sidebar);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-container {
+    background-color: var(--bg-editor);
+    color: var(--text-editor);
+    display: flex;
+    flex-direction: column;
+}
